@@ -1,0 +1,1079 @@
+/* start var */
+:root {
+    --main-color-1: #000000;
+    --main-color-2: #fc0202;
+    --main-color-3: #ffb443;
+    --main-color-4: #ff61e6;
+    --main-color-5: #adff00;
+    --main-color-6: #42bbff;
+    --main-color-7: #8d8c8c31;
+    --main-color-8: #ffffff;
+    --main-color-9: #6a6a6a;
+
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+body{
+            /* color: var(--main-color-8); */
+    font-family: sans-serif;
+    text-transform: capitalize;
+    color: black;
+}
+.toggle {
+    background-color: var(--main-color-1);
+    color: white;
+}
+ul{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+    color: var(--main-color-9);
+}
+
+:focus{
+    outline: none;
+}
+@media(max-width:767px){
+    .toggle {
+        background-color: var(--main-color-1);
+        color: white;
+    }
+}
+/* start container */
+.container {
+    display: flex;
+    
+}
+
+/* end container */
+
+/* start aside */
+.aside {
+    width: 247px;
+    height: 1000px;
+    border-right: 1px solid var(--main-color-9);
+}
+@media(max-width:767px){
+    .aside{
+        width: 0%;
+        height: 100%;
+        transition: 0.2s;
+    }
+    .aside_mob{
+        width: 100%;
+        transition:0.2s;
+    }
+}
+@media(max-width:767px){
+    .line{
+        width: 30px;
+        height: 3px;
+        margin-bottom: 6px;
+        background-color: var(--main-color-8);
+        display: block;
+    }
+    .line_dark{
+        background-color: black;
+    }
+}
+/* end aside */
+
+/* start aside head */
+.aside .head{
+    text-align: center;
+
+}
+.aside .head .thems {
+    position: relative;
+    margin: auto;
+    width: 22px;
+    height: 22px;
+    background-color: var(--main-color-5);
+    clip-path: polygon(50% 0%, 100% 38%, 82% 100%, 18% 100%, 0% 38%);
+    margin-top: 30px;
+}
+
+.aside .head .thems::before {
+    content: "";
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background-color: var(--main-color-1);
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    border-radius: 50%;
+}
+
+.aside .head h2 {
+    font-size: 22px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.aside .head p {
+    font-size: 16px;
+    margin-bottom: 5px;
+    color: var(--main-color-9);
+    
+}
+@media(max-width:767px){
+    .aside .head{
+        visibility: hidden;
+    }
+    .aside .head_mob{
+        visibility: visible;
+    }
+}
+/* end aside head*/
+
+/* start aside main */
+.aside .main{
+    margin-top: 70px;
+}
+.aside .main ul li{
+    position: relative;
+    margin: 0 25px;
+    margin-top: 10px;
+    padding: 8px 5px 8px 5px;
+    transition: 0.3s;
+}
+.aside .main ul li a i{
+    margin-right: 15px;
+    font-size: 20px;
+}
+.aside .main ul li .num{
+    width: 20px;
+    height: 16px;
+    background-color: var(--main-color-2);
+    font-size: 14px;
+    text-align: center;
+    border-radius: 50%;
+    position: absolute;
+    right: 0;
+}
+.aside .main ul li h5{
+    position: relative;
+    left: 35px;
+    display: none;
+    transition: 0.3s;
+
+}
+.aside .main ul li:hover{
+    background-color: var(--main-color-5);
+    border-radius: 10px;
+}
+.aside .main ul li:hover a{
+    color: var(--main-color-1);
+}
+@media(max-width:767px){
+    .aside .main .ul{
+        display: none;
+    }
+    .aside .main .ul_mob{
+        display: block;
+    }
+}
+/* end aside main */
+
+/* start aside header */
+.aside .header{
+    background-color: var(--main-color-7);
+    margin: 200px 20px 0 20px ;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+}
+.aside .header h3{
+    font-size: 16px;
+    margin-bottom: 5px;
+}
+.aside .header p{
+    font-size: 14px;
+    margin-bottom: 5px;
+    color: var(--main-color-9);
+}
+.aside .header button{
+    margin-top: 20px;
+    background-color: var(--main-color-5);
+    border: none;
+    border-radius: 6px;
+    padding: 10px;
+    width: 100%;
+
+}
+@media(max-width:767px){
+    .aside .header{
+        display: none;
+    }
+    .aside .header_mob{
+        display: block;
+    }
+}
+/* end aside header */
+
+/* start contact */
+.contact{
+    width: 100%;
+    overflow: hidden;
+}
+@media(max-width:767px){
+    .contact{
+        margin-top: 20px;
+        
+    }
+}
+/* end contact */
+
+/* start contact head */
+.contact .head{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 20px;
+    border-bottom: 1px solid var(--main-color-9);
+}
+.contact .head .name h2{
+    display: none;
+    transition: 30s;
+}
+
+.contact .head .groub{
+    display: flex;
+    align-items: center;
+}
+.contact .head .groub button{
+    background-color: var(--main-color-5);
+    border: none;
+    border-radius: 6px;
+    padding: 6px 10px;
+    display: flex;
+    align-items: center;
+    width: 97px;
+
+}
+.contact .head .groub button span{
+    font-size: 25px;
+    margin-left: 5px;
+}
+.contact .head .groub .search{
+    position: relative;
+}
+.contact .head .groub input{
+    width: 251px;
+    margin-left: 15px;
+    border: none;
+    background-color: var(--main-color-7);
+    padding: 10px;
+    border-radius: 6px;
+    
+}
+.contact .head .groub .sch{
+    position: absolute;
+    right: 5px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: black;
+}
+.contact .head .groub .bell{
+    margin-left: 15px;
+    position: relative;
+    color: black;
+}
+.contact .head .groub .bell::after{
+    content: "";
+    position: absolute;
+    left: 9px;
+    width: 7px;
+    height: 7px;
+    background-color: var(--main-color-2);
+    border-radius: 50%;
+}
+.contact .head .groub .moon{
+    margin-left: 15px;
+    color: black;
+}
+.contact .head .groub .moon_toggle{
+    color: white;
+}
+
+.contact .head .groub .images{
+    position: relative;
+}
+.contact .head .groub .images img{
+    border-radius: 50%;
+    margin-left: 15px;
+}
+.contact .head .groub .images .green{
+    content: "";
+    position: absolute;
+    right: 0;
+    top: 20px;
+    width: 10px;
+    height: 10px;
+    background-color: var(--main-color-5);
+    border-radius: 50%;
+    border: 1px solid var(--main-color-1);
+}
+@media(max-width:767px){
+    .contact .head{
+        display: block;
+        padding: 0;
+        padding-left: 10px;
+        padding-right: 10px;
+        padding-bottom: 15px;
+        margin-top: 15px;
+    }
+    .contact .head .groub button{
+        width: 60px;
+        font-size: 12px;
+    }
+    .contact .head .groub button span{
+        font-size: 15px;
+    }
+    .contact .head .groub input{
+        width: 190px;
+        color: white;
+    }
+    .contact .head h2{
+        font-size: 20px;
+        padding-top: 0;
+        margin-bottom: 10px;
+        margin-left: 60px;
+    }
+}
+/* end contact head */
+
+/* start contact main1 */
+.contact .main1{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+}
+.contact .main1 .text{
+    display: flex;
+}
+.contact .main1 .text p{
+    margin-right: 15px;
+    color: var(--main-color-9);
+    padding: 5px 0;
+    transition: 0.3s;
+}
+.contact .main1 .text .active,
+.contact .main1 .text p:hover{
+    color: var(--main-color-8);
+    border-bottom: 1px solid var(--main-color-5);
+}
+.contact .main1 .text2{
+    display: flex;
+}
+.contact .main1 .text2 i{
+    margin-left: 5px;
+}
+/* end contact main1 */
+
+/* start contact main2 */
+.contact .containertwo{
+    padding: 20px;
+    overflow-x: scroll;
+}
+/* start main2 card1 */
+.contact .containertwo .main2{
+    display: flex;
+    gap: 30px;
+}
+.contact .containertwo .main2 .card1 .groub{
+    display: flex;
+    align-items: center;
+}
+.contact .containertwo .main2 .card1 .groub .p_moon_one{
+    color: black;
+}
+.contact .containertwo .main2 .card1 .groub .moon_toggle_one{
+    color: white;
+}
+.contact .containertwo .main2 .card1 .crd{
+    background-color: var(--main-color-7);
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    width: 322px;
+}
+.contact .containertwo .main2 .card1 .crd .groub .green{
+    width: 10px;
+    height: 10px;
+    background-color: var(--main-color-5);
+    border-radius: 50%;
+    margin-right: 8px;
+}
+.contact .containertwo .main2 .card1 .crd .groub2 span{
+    width: 4px;
+    height: 4px;
+    background-color: var(--main-color-9);
+    display: block;
+    margin-bottom: 2px;
+    border-radius: 50%;
+}
+/* start card1 */
+.contact .containertwo .main2 .card1 .cardone{
+    width: 322px;
+    border: 2px  var(--main-color-8);
+    border-style: dashed;
+    margin-top: 20px;
+    padding: 20px 15px;
+    
+}
+.contact .containertwo .main2 .card1 .cardone.ggg1{
+    border-color: black;
+}
+.contact .containertwo .main2 .card1 .cardone .one{
+    width: 46px;
+    height: 32px;
+    border-radius: 40px;
+    background-color: transparent;
+    color: var(--main-color-8);
+    border: 1px solid var(--main-color-8);
+    font-size: 12px;
+    font-weight: bold;
+}
+.contact .containertwo .main2 .card1 .cardone .two{
+    width: 89px;
+    height: 32px;
+    border-radius: 40px;
+    background-color: var(--main-color-3);
+    color: var(--main-color-1);
+    font-size: 12px;
+    font-weight: bold;
+}
+.contact .containertwo .main2 .card1 .cardone .h-one{
+    font-size: 16px;
+    margin-top: 20px;
+}
+.contact .containertwo .main2 .card1 .cardone .h-two{
+    font-size: 16px;
+    margin-top: 5px;
+    margin-bottom: 15px;
+}
+.contact .containertwo .main2 .card1 .cardone p{
+    font-size: 14px;
+    margin-bottom: 5px;
+    color: var(--main-color-9);
+}
+.contact .containertwo .main2 .card1 .cardone .group{
+    padding: 20px 0;
+    border-top: 1px solid var(--main-color-9);
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+
+}
+.contact .containertwo .main2 .card1 .cardone .icon i{
+    color: var(--main-color-9);
+    margin-right: 5px;
+    position: relative;
+}
+.contact .containertwo .main2 .card1 .cardone .icon i::after{
+    content: "";
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    background-color: var(--main-color-2);
+    border-radius: 50%;
+    right: -2px;
+    top: -2px;
+    border: 1px solid var(--main-color-1);
+}
+.contact .containertwo .main2 .card1 .cardone .icon span{
+    padding: 3px 7px;
+    background-color: var(--main-color-7);
+    color: var(--main-color-8);
+    border-radius: 50%;
+    font-size: 14px;
+}
+.contact .containertwo .main2 .card1 .cardone .images img{
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    border: 1px solid var(--main-color-1);
+}
+.contact .containertwo .main2 .card1 .cardone .images .img-one{
+    right: 50px;
+}
+.contact .containertwo .main2 .card1 .cardone .images .img-two{
+    right: 36px;
+}
+.contact .containertwo .main2 .card1 .cardone .images .img-three{
+    right: 18px;
+}
+/* end card1 */
+
+/* two */
+
+.contact .containertwo .main2 .card1 .cardtwo{
+    width: 322px;
+    border: 2px  var(--main-color-8);
+    border-style: dashed;
+    margin-top: 20px;
+    padding: 20px 15px;
+    
+}
+.contact .containertwo .main2 .card1 .cardtwo.ggg2{
+    border-color: black;
+}
+.contact .containertwo .main2 .card1 .cardtwo .one{
+    width: 46px;
+    height: 32px;
+    border-radius: 40px;
+    background-color: transparent;
+    color: var(--main-color-8);
+    border: 1px solid var(--main-color-8);
+    font-size: 12px;
+    font-weight: bold;
+}
+.contact .containertwo .main2 .card1 .cardtwo .two{
+    width: 97px;
+    height: 32px;
+    border-radius: 40px;
+    background-color: var(--main-color-4);
+    color: var(--main-color-1);
+    font-size: 12px;
+    font-weight: bold;
+}
+.contact .containertwo .main2 .card1 .cardtwo .h-one{
+    font-size: 16px;
+    margin-top: 20px;
+}
+.contact .containertwo .main2 .card1 .cardtwo .h-two{
+    font-size: 16px;
+    margin-top: 5px;
+    margin-bottom: 15px;
+}
+.contact .containertwo .main2 .card1 .cardtwo p{
+    font-size: 14px;
+    margin-bottom: 5px;
+    color: var(--main-color-9);
+}
+.contact .containertwo .main2 .card1 .cardtwo .group{
+    padding: 20px 0;
+    border-top: 1px solid var(--main-color-9);
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+
+}
+.contact .containertwo .main2 .card1 .cardtwo .icon i{
+    color: var(--main-color-9);
+    margin-right: 5px;
+    position: relative;
+}
+
+.contact .containertwo .main2 .card1 .cardtwo .icon span{
+    padding: 3px 7px;
+    background-color: var(--main-color-7);
+    color: var(--main-color-8);
+    border-radius: 50%;
+    font-size: 14px;
+}
+.contact .containertwo .main2 .card1 .cardtwo .images img{
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    border: 1px solid var(--main-color-1);
+}
+.contact .containertwo .main2 .card1 .cardtwo .images .img-three{
+    right: 18px;
+}
+
+.contact .containertwo .main2 .card1 .head1{
+    width: 322px;
+    background-color: var(--main-color-7);
+    padding: 15px;
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.contact .containertwo .main2 .card1 .head1 span{
+    font-size: 25px;
+    margin-left: 10px;
+}
+/* end main2 card1 */
+
+/* start main2 card2 */
+
+.contact .containertwo .main2 .card2 .groub{
+    display: flex;
+    align-items: center;
+}
+.contact .containertwo .main2 .card2 .groub .p_moon_two{
+    color: black;
+}
+.contact .containertwo .main2 .card2 .groub .moon_toggle_two{
+    color: white;
+}
+.contact .containertwo .main2 .card2 .crd{
+    background-color: var(--main-color-7);
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    width: 322px;
+}
+.contact .containertwo .main2 .card2 .crd .groub .green{
+    width: 10px;
+    height: 10px;
+    background-color: var(--main-color-6);
+    border-radius: 50%;
+    margin-right: 8px;
+}
+.contact .containertwo .main2 .card2 .crd .groub2 span{
+    width: 4px;
+    height: 4px;
+    background-color: var(--main-color-9);
+    display: block;
+    margin-bottom: 2px;
+    border-radius: 50%;
+}
+.contact .containertwo .main2 .card2 .cardone{
+    width: 322px;
+    border: 2px  var(--main-color-8);
+    border-style: dashed;
+    margin-top: 20px;
+    padding: 20px 15px;
+    
+}
+.contact .containertwo .main2 .card2 .cardone.ggg3{
+    border-color: black;
+}
+.contact .containertwo .main2 .card2 .cardone .one{
+    width: 75px;
+    height: 32px;
+    border-radius: 40px;
+    background-color: var(--main-color-5);
+    color: var(--main-color-1);
+    font-size: 12px;
+    font-weight: bold;
+}
+.contact .containertwo .main2 .card2 .cardone .two{
+    width: 89px;
+    height: 32px;
+    border-radius: 40px;
+    background-color: var(--main-color-3);
+    color: var(--main-color-1);
+    font-size: 12px;
+    font-weight: bold;
+}
+.contact .containertwo .main2 .card2 .cardone .h-one{
+    font-size: 16px;
+    margin-top: 20px;
+}
+.contact .containertwo .main2 .card2 .cardone .h-two{
+    font-size: 16px;
+    margin-top: 5px;
+    margin-bottom: 15px;
+}
+.contact .containertwo .main2 .card2 .cardone p{
+    font-size: 14px;
+    margin-bottom: 5px;
+    color: var(--main-color-9);
+}
+.contact .containertwo .main2 .card2 .cardone .imag{
+    width: 290px;
+height: 150px;
+overflow: hidden;
+position: relative;
+border-radius: 16px;
+}
+.contact .containertwo .main2 .card2 .cardone .imag img{
+
+width: 300px;
+height: 300px;
+position: absolute;
+top: -80px;
+border-radius: 16px;
+}
+.contact .containertwo .main2 .card2 .cardone .progress{
+    width: 290px;
+    height: 24px;
+    position: relative;
+}
+.contact .containertwo .main2 .card2 .cardone .progress .wd-one{
+    width: 252px;
+    height: 7.75px;
+    border-radius: 32px;
+    background-color: var(--main-color-7);
+    position: absolute;
+    top: 50%;
+}
+.contact .containertwo .main2 .card2 .cardone .progress .wd-two{
+    height: 7.75px;
+    background-color: var(--main-color-5);
+    border-radius: 32px;
+    
+}
+.contact .containertwo .main2 .card2 .cardone .progress .wd-two::after{
+    content: attr(data-prog);
+    position: absolute;
+    right: -35px;
+    font-size: 14px;
+    top: -50%;
+}
+.contact .containertwo .main2 .card2 .cardone .group{
+    padding: 20px 0;
+    border-top: 1px solid var(--main-color-9);
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+
+}
+.contact .containertwo .main2 .card2 .cardone .icon i{
+    color: var(--main-color-9);
+    margin-right: 5px;
+    position: relative;
+}
+
+.contact .containertwo .main2 .card2 .cardone .icon span{
+    padding: 3px 7px;
+    background-color: var(--main-color-7);
+    color: var(--main-color-8);
+    border-radius: 50%;
+    font-size: 14px;
+}
+.contact .containertwo .main2 .card2 .cardone .images img{
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    border: 1px solid var(--main-color-1);
+}
+.contact .containertwo .main2 .card2 .cardone .images .img-one{
+    right: 50px;
+}
+.contact .containertwo .main2 .card2 .cardone .images .img-two{
+    right: 36px;
+}
+.contact .containertwo .main2 .card2 .cardone .images .img-three{
+    right: 18px;
+}
+
+.contact .containertwo .main2 .card2 .head1{
+    width: 322px;
+    background-color: var(--main-color-7);
+    padding: 15px;
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.contact .containertwo .main2 .card2 .head1 span{
+    font-size: 25px;
+    margin-left: 10px;
+}
+/* end main2 card2 */
+
+/* start main2 card3 */
+.contact .containertwo .main2 .card3 .groub{
+    display: flex;
+    align-items: center;
+}
+.contact .containertwo .main2 .card3 .groub .p_moon_three{
+    color: black;
+}
+.contact .containertwo .main2 .card3 .groub .moon_toggle_three{
+    color: white;
+}
+.contact .containertwo .main2 .card3 .crd{
+    background-color: var(--main-color-7);
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    width: 322px;
+}
+.contact .containertwo .main2 .card3 .crd .groub .green{
+    width: 10px;
+    height: 10px;
+    background-color: var(--main-color-5);
+    border-radius: 50%;
+    margin-right: 8px;
+}
+.contact .containertwo .main2 .card3 .crd .groub2 span{
+    width: 4px;
+    height: 4px;
+    background-color: var(--main-color-9);
+    display: block;
+    margin-bottom: 2px;
+    border-radius: 50%;
+}
+
+.contact .containertwo .main2 .card3 .cardone{
+    width: 322px;
+    border: 2px  var(--main-color-8);
+    border-style: dashed;
+    margin-top: 20px;
+    padding: 20px 15px;
+    
+}
+.contact .containertwo .main2 .card3 .cardone.ggg4{
+    border-color: black;
+}
+.contact .containertwo .main2 .card3 .cardone .one{
+    width: 112px;
+    height: 32px;
+    border-radius: 40px;
+    background-color: transparent;
+    border: 1px solid var(--main-color-8);
+    color: var(--main-color-8);
+    font-size: 12px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.contact .containertwo .main2 .card3 .cardone .h-one{
+    font-size: 16px;
+    margin-top: 20px;
+}
+.contact .containertwo .main2 .card3 .cardone .h-two{
+    font-size: 16px;
+    margin-top: 5px;
+    margin-bottom: 15px;
+}
+.contact .containertwo .main2 .card3 .cardone .imag{
+    width: 290px;
+    height: 150px;
+    overflow: hidden;
+    position: relative;
+    border-radius: 16px;
+}
+.contact .containertwo .main2 .card3 .cardone .imag img{
+    width: 300px;
+    height: 350px;
+    position: absolute;
+    top: -110px;
+    border-radius: 16px;
+}
+
+.contact .containertwo .main2 .card3 .cardone .progress .wd-two::after{
+    content: attr(data-prog);
+    position: absolute;
+    right: -35px;
+    font-size: 14px;
+    top: -50%;
+}
+.contact .containertwo .main2 .card3 .cardone .group{
+    padding: 20px 0;
+    border-top: 1px solid var(--main-color-9);
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+.contact .containertwo .main2 .card3 .cardone .icon i{
+    color: var(--main-color-9);
+    margin-right: 5px;
+    position: relative;
+}
+
+.contact .containertwo .main2 .card3 .cardone .icon span{
+    padding: 3px 7px;
+    background-color: var(--main-color-7);
+    color: var(--main-color-8);
+    border-radius: 50%;
+    font-size: 14px;
+}
+.contact .containertwo .main2 .card3 .cardone .images img{
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    border: 1px solid var(--main-color-1);
+}
+.contact .containertwo .main2 .card3 .cardone .images .img-one{
+    right: 50px;
+}
+.contact .containertwo .main2 .card3 .cardone .images .img-two{
+    right: 36px;
+}
+.contact .containertwo .main2 .card3 .cardone .images .img-three{
+    right: 18px;
+}
+
+.contact .containertwo .main2 .card3 .head1{
+    width: 322px;
+    background-color: var(--main-color-7);
+    padding: 15px;
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.contact .containertwo .main2 .card3 .head1 span{
+    font-size: 25px;
+    margin-left: 10px;
+}
+/* end main2 card3 */
+
+/* start main2 card4 */
+.contact .containertwo .main2 .card4 .groub{
+    display: flex;
+    align-items: center;
+}
+.contact .containertwo .main2 .card4 .groub .p_moon{
+    color: black;
+}
+.contact .containertwo .main2 .card4 .groub .p_toggle{
+    color: white;
+}
+.contact .containertwo .main2 .card4 .crd{
+    background-color: var(--main-color-7);
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    width: 322px;
+}
+.contact .containertwo .main2 .card4 .crd .groub .green{
+    width: 10px;
+    height: 10px;
+    background-color: var(--main-color-4);
+    border-radius: 50%;
+    margin-right: 8px;
+}
+.contact .containertwo .main2 .card4 .crd .groub2 span{
+    width: 4px;
+    height: 4px;
+    background-color: var(--main-color-9);
+    display: block;
+    margin-bottom: 2px;
+    border-radius: 50%;
+}
+.contact .containertwo .main2 .card4 .cardone{
+    width: 322px;
+    border: 2px  var(--main-color-8);
+    border-style: dashed;
+    margin-top: 20px;
+    padding: 20px 15px;
+}
+.contact .containertwo .main2 .card4 .cardone.ggg5{
+    border-color: black;
+}
+.contact .containertwo .main2 .card4 .cardone .two{
+    width: 89px;
+    height: 32px;
+    border-radius: 40px;
+    background-color: var(--main-color-5);
+    color: var(--main-color-1);
+    font-size: 12px;
+    font-weight: bold;
+}
+.contact .containertwo .main2 .card4 .cardone .h-one{
+    font-size: 16px;
+    margin-top: 20px;
+}
+.contact .containertwo .main2 .card4 .cardone .images2 img{
+    width: 50px;
+    height: 50px;
+    border-radius: 6px;
+    margin-top: 20px;
+}
+
+.contact .containertwo .main2 .card4 .cardone .group{
+    padding: 20px 0;
+    border-top: 1px solid var(--main-color-9);
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+
+}
+.contact .containertwo .main2 .card4 .cardone .icon i{
+    color: var(--main-color-9);
+    margin-right: 5px;
+    position: relative;
+}
+.contact .containertwo .main2 .card4 .cardone .icon i::after{
+    content: "";
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    background-color: var(--main-color-2);
+    border-radius: 50%;
+    right: -2px;
+    top: -2px;
+    border: 1px solid var(--main-color-1);
+}
+.contact .containertwo .main2 .card4 .cardone .icon span{
+    padding: 3px 7px;
+    background-color: var(--main-color-7);
+    color: var(--main-color-8);
+    border-radius: 50%;
+    font-size: 14px;
+}
+.contact .containertwo .main2 .card4 .cardone .images img{
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    border: 1px solid var(--main-color-1);
+
+}
+.contact .containertwo .main2 .card4 .cardone .images img::after{
+    content: "";
+    position: absolute;
+    background-color: red;
+}
+.contact .containertwo .main2 .card4 .cardone .images .img-one{
+    right: 50px;
+}
+.contact .containertwo .main2 .card4 .cardone .images .img-two{
+    right: 36px;
+}
+.contact .containertwo .main2 .card4 .cardone .images .img-three{
+    right: 18px;
+}
+.contact .containertwo .main2 .card4 .head1{
+    width: 322px;
+    background-color: var(--main-color-7);
+    padding: 15px;
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.contact .containertwo .main2 .card4 .head1 span{
+    font-size: 25px;
+    margin-left: 10px;
+}
+/* end main2 card4 */
+
+
+/* end contact main2 */

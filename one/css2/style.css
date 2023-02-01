@@ -1,0 +1,777 @@
+:root {
+    --main-color-1: #000000;
+    --main-color-2: #fc0202;
+    --main-color-3: #ffb443;
+    --main-color-4: #ff61e6;
+    --main-color-5: #adff00;
+    --main-color-6: #42bbff;
+    --main-color-7: #8d8c8c31;
+    --main-color-8: #ffffff;
+    --main-color-9: #6a6a6a;
+    --main-color-10: #1e1e1e;
+
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--main-color-10);
+    position: relative;
+    color: var(--main-color-8);
+    font-family: sans-serif;
+
+
+}
+
+/* h1{
+    margin: 0;
+    padding: 0;
+} */
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-transform: none;
+}
+
+.one {
+    width: 400px;
+    height: 400px;
+    background-color: #aeff000e;
+    border-radius: 50%;
+    position: absolute;
+    right: -80px;
+    top: 80px;
+    filter: blur(30px);
+}
+
+.two {
+    width: 400px;
+    height: 400px;
+    background-color: #aeff000e;
+    border-radius: 50%;
+    position: absolute;
+    left: -80px;
+    top: 280px;
+    filter: blur(30px);
+}
+
+@media(max-width:767px) {
+
+    .two,
+    .one {
+        width: 150px;
+        height: 150px;
+        /* display: none; */
+    }
+
+    .one {
+        left: 230px;
+    }
+}
+
+/* start container header */
+.container .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 130px;
+    padding: 40px 0;
+
+}
+
+.container .header h2 {
+    font-size: 22px;
+}
+
+.container .header ul {
+    display: flex;
+}
+
+.container .header ul li {
+    margin-left: 30px;
+    font-size: 16px;
+    padding: 10px 0;
+}
+
+.container .header ul li:hover {
+    color: #adff00;
+    border-bottom: 1px solid #adff00;
+    transition: 0.5s;
+}
+
+.container .header .groub1 {
+    display: flex;
+    align-items: center;
+}
+
+.container .header .groub1 h2 {
+    font-size: 16px;
+    margin-right: 20px;
+}
+
+.container .header .groub1 button {
+    border: none;
+    background-color: var(--main-color-5);
+    font-size: 16px;
+    width: 118px;
+    height: 52px;
+    border-radius: 40px;
+}
+
+@media(max-width:767px) {
+    .container .header {
+        margin: 0 10px;
+        display: block;
+    }
+
+    .container .header h2 {
+        text-align: center;
+    }
+
+    .container .header ul li {
+        margin: auto;
+        margin-left: 15px;
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+
+    .container .header .groub1 {
+        justify-content: center;
+    }
+
+    .container .header .groub1 button {
+        width: 90px;
+        height: 26px;
+    }
+}
+
+/* end container header */
+
+/* start container main1 */
+.container .main1 {
+    position: relative;
+    width: fit-content;
+    margin: auto;
+    text-align: center;
+    margin-top: 80px;
+}
+
+.container .main1 h2 {
+    font-size: 72px;
+}
+
+.container .main1 h2:nth-child(2) {
+    margin-bottom: 20px;
+}
+
+.container .main1 p {
+    font-size: 18px;
+    margin-bottom: 5px;
+    color: var(--main-color-9);
+}
+
+.container .main1 .btn1 {
+    width: 156px;
+    height: 56px;
+    background-color: var(--main-color-5);
+    border-radius: 40px;
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 50px;
+    margin-right: 5px;
+}
+
+.container .main1 .btn2 {
+    width: 168px;
+    height: 56px;
+    border: 1px solid var(--main-color-8);
+    background-color: transparent;
+    color: var(--main-color-8);
+    border-radius: 40px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 50px;
+    margin-left: 5px;
+}
+
+.container .main1 .shape-one {
+    width: 33px;
+    height: 32px;
+    clip-path: polygon(50% 0, 67% 33%, 100% 54%, 100% 53%, 69% 69%, 50% 100%, 30% 69%, 0 51%, 0 51%, 31% 34%);
+    background-color: var(--main-color-5);
+    position: absolute;
+    right: 20px;
+    top: -20px;
+}
+
+.container .main1 .shape-two {
+    width: 33px;
+    height: 32px;
+    clip-path: polygon(50% 0, 67% 33%, 100% 54%, 100% 53%, 69% 69%, 50% 100%, 30% 69%, 0 51%, 0 51%, 31% 34%);
+    background-color: var(--main-color-5);
+    position: absolute;
+    bottom: 100px;
+    left: 20px;
+}
+
+@media(max-width:767px) {
+    .container .main1 h2 {
+        font-size: 36px;
+    }
+
+    .container .main1 p {
+        font-size: 12px;
+    }
+
+    .container .main1 .shape-one {
+        top: 90px;
+    }
+
+    .container .main1 .shape-two {
+        top: 190px;
+    }
+
+    .container .main1 .btn1 {
+        width: 120px;
+        height: 40px;
+    }
+
+    .container .main1 .btn2 {
+        width: 120px;
+        height: 40px;
+    }
+}
+
+/* end container main1 */
+
+/* start container main2 */
+.container .main2 img {
+    border-radius: 16px;
+    border: 5px solid var(--main-color-7);
+    margin: auto;
+    display: block;
+    margin-top: 150px;
+    cursor: pointer;
+    margin-bottom: 150px;
+}
+
+@media(max-width:767px) {
+    .container .main2 img {
+        width: 350px;
+    }
+}
+
+/* end container main2 */
+
+/* start container main3 */
+.container .main3 {
+    width: fit-content;
+    margin: auto;
+    text-align: center;
+    margin-bottom: 150px;
+}
+
+.container .main3 h2 {
+    font-size: 42px;
+}
+
+.container .main3 h2:nth-child(2) {
+    margin-bottom: 15px;
+}
+
+.container .main3 p {
+    font-size: 18px;
+    color: var(--main-color-9);
+}
+
+.container .main3 .p2 {
+    margin-bottom: 40px;
+}
+
+.container .main3 .cards {
+    display: flex;
+    gap: 30px;
+
+}
+
+.container .main3 .cards h5 {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.container .main3 .cards p {
+    font-size: 16px;
+    color: var(--main-color-9);
+}
+
+.container .main3 .cards .card {
+    background-color: #090909;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+.container .main3 .cards .def {
+    background-color: var(--main-color-5);
+    color: var(--main-color-1);
+}
+
+.container .main3 .cards .card .shape {
+    width: 78px;
+    height: 78px;
+    background-color: #0C0B0B;
+    margin: auto;
+    margin-bottom: 20px;
+    position: relative;
+    border-radius: 8px;
+}
+
+.container .main3 .cards .card .shape .shp1 {
+    width: 30px;
+    height: 30px;
+    background-color: #8bffc7;
+    border-radius: 50%;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.container .main3 .cards .card .shape .shp2 {
+    clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
+    width: 32px;
+    height: 32px;
+    background-color: #ef36ff;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.container .main3 .cards .card .shape .shp3 {
+    width: 30px;
+    height: 30px;
+    clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+    background-color: #b0ff06;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+@media(max-width:767px) {
+    .container .main3 h2 {
+        font-size: 30px;
+    }
+
+    .container .main3 .cards {
+        flex-direction: column;
+        padding: 0 10px;
+    }
+}
+
+/* end container main3 */
+
+/* start container main4 */
+.container .main4 {
+    width: fit-content;
+    margin: auto;
+    position: relative;
+    right: -50px;
+
+}
+
+.container .main4 .cards {
+    display: flex;
+    justify-content: space-between;
+}
+
+.container .main4 .cards .card1 h2 {
+    font-size: 42px;
+}
+
+.container .main4 .cards .card1 h2:nth-child(2) {
+    margin-bottom: 20px;
+}
+
+.container .main4 .cards .card1 p {
+    font-size: 18px;
+    color: var(--main-color-9);
+    margin-bottom: 5px;
+}
+
+.container .main4 .cards .card1 button {
+    width: 151px;
+    height: 56px;
+    font-size: 16px;
+    border: none;
+    background-color: var(--main-color-5);
+    border-radius: 40px;
+    margin-top: 30px;
+}
+
+.container .main4 .cards .card2 .img1 {
+    position: relative;
+    transform: rotate(-10deg);
+    right: -300px;
+    border: 3px solid var(--main-color-9);
+    border-radius: 18px;
+}
+
+.container .main4 .cards .card2 .img2 {
+    position: relative;
+    transform: rotate(20deg);
+    left: -300px;
+    bottom: -150px;
+    border: 3px solid var(--main-color-9);
+    border-radius: 18px;
+}
+
+@media(max-width:767px) {
+    .container .main4 .cards .card1 h2 {
+        font-size: 30px;
+        width: fit-content;
+    }
+
+    .container .main4 .cards .card2 .img1 {
+        position: relative;
+        width: 150px;
+        left: 200px;
+        top: -100px;
+
+    }
+
+    .container .main4 .cards .card2 .img2 {
+        position: relative;
+        width: 150px;
+        top: -100px;
+        left: 0px;
+    }
+
+    .container .main4 .cards {
+        display: block;
+    }
+
+    .container .main4 .cards .card1 p {
+        font-size: 12px;
+    }
+
+    .container .main4 {
+        position: static;
+    }
+
+    .container .main4 .cards .card1 button {
+        width: 120px;
+        height: 40px;
+    }
+
+    .container .main4 .cards .card2 {
+        margin-top: 50px;
+    }
+}
+
+/* end container main4 */
+
+/* start container main5 */
+.container .main5 {
+    margin: auto;
+    margin-top: 300px;
+    width: fit-content;
+
+}
+
+.container .main5 h2 {
+    font-size: 42px;
+    text-align: center;
+}
+
+.container .main5 h2:nth-child(2) {
+    margin-bottom: 15px;
+}
+
+.container .main5 p {
+    font-size: 18px;
+    text-align: center;
+}
+
+.container .main5 .cards {
+    display: flex;
+    gap: 40px;
+    margin-top: 50px;
+}
+
+.container .main5 .cards .card {
+    background-color: #0e0e0e;
+    width: 334px;
+    height: 550px;
+    padding: 30px 20px;
+    border-radius: 16px;
+}
+
+.container .main5 .cards .def {
+    background-color: var(--main-color-5);
+    color: var(--main-color-1);
+}
+
+.container .main5 .cards .def h6::after {
+    font-family: var(--fa-style-family-classic);
+    content: "\f00c";
+    font-weight: 900;
+    position: absolute;
+    left: -35px;
+    color: var(--main-color-1);
+}
+
+.container .main5 .cards .card h4 {
+    font-size: 20px;
+    position: relative;
+    margin-bottom: 30px;
+}
+
+.container .main5 .cards .card h4::after {
+    content: "";
+    position: absolute;
+    width: 20px;
+    height: 3px;
+    background-color: var(--main-color-5);
+    bottom: -15px;
+    left: 0;
+}
+
+.container .main5 .cards .card p {
+    font-size: 16px;
+    text-align: start;
+    margin-bottom: 5px;
+    color: var(--main-color-9);
+}
+
+.container .main5 .cards .card h6 {
+    font-size: 16px;
+    margin-bottom: 30px;
+    position: relative;
+    left: 35px;
+}
+
+.container .main5 .cards .card .h6-one {
+    margin-top: 35px;
+}
+
+.container .main5 .cards .card h6::before {
+    font-family: var(--fa-style-family-classic);
+    content: "\f00c";
+    font-weight: 900;
+    position: absolute;
+    left: -35px;
+    color: var(--main-color-5);
+
+}
+
+.container .main5 .cards .card button {
+    font-size: 16px;
+    width: 270px;
+    height: 48px;
+    border-radius: 40px;
+    background-color: #0e0e0e;
+    border-color: var(--main-color-8);
+    color: var(--main-color-8);
+    margin-top: 70px;
+    cursor: pointer;
+}
+
+@media(max-width:767px) {
+    .container .main5 .cards {
+        display: block;
+    }
+
+    .container .main5 .cards .card {
+        overflow: hidden;
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .container .main5 {
+        margin-top: 30px;
+    }
+    .container .main5 h2{
+        font-size: 30px;
+    }
+}
+
+/* end container main5 */
+
+/* start container main6 */
+.container .main6 {
+    background-color: var(--main-color-7);
+    width: 1200px;
+    height: 500px;
+    margin: auto;
+    margin-top: 100px;
+    margin-bottom: 50px;
+    padding: 0 90px;
+    overflow: hidden;
+    position: relative;
+    border-radius: 20px;
+}
+
+.container .main6 .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.container .main6 .container .card1 {
+    transform: translateY(130px);
+}
+
+.container .main6 .container .card1 h2 {
+    font-size: 42px;
+}
+
+.container .main6 .container .card1 h2:not(:first-child) {
+    margin-bottom: 20px;
+}
+
+.container .main6 .container .card1 p {
+    font-size: 18px;
+    color: var(--main-color-9);
+}
+
+.container .main6 .container .card1 button {
+    width: 150px;
+    height: 56px;
+    border-radius: 40px;
+    background-color: var(--main-color-5);
+    border: none;
+    font-size: 16px;
+    margin-top: 15px;
+    cursor: pointer;
+}
+
+.container .main6 .victor {
+    position: absolute;
+    bottom: -50px;
+    left: 180px;
+}
+
+.container .main6 .container .card2 img {
+    width: 826px;
+    height: 574px;
+    position: absolute;
+    right: -170px;
+    transform: rotate(10deg);
+    border-radius: 16px;
+    bottom: -200px;
+}
+@media(max-width:767px){
+    .container .main6{
+        width: 100%;
+        padding: 0 5px;
+        margin: 0;
+    }
+    .container .main6 .container{
+        flex-direction: column;
+        padding: 30px 0 0 0 ;
+    }
+    .container .main6 .container .card2 img{
+        width: 413px;
+        height: 287px;
+        left: 0;
+        top: 315px;
+    }
+    .container .main6 .container .card1{
+        transform: translateY(0);
+    }
+    .container .main6 .container .card1 h2{
+        font-size: 30px;
+        text-align: center;
+    }
+    .container .main6 .container .card1 button{
+        width: 120px;
+        height: 40px;
+    }
+}
+/* end container main6 */
+
+/* start conteiner footer */
+.container .footer {
+    /* background-color: var(--main-color-7); */
+    margin: 0 150px;
+    margin-top: 100px;
+
+}
+
+.container .footer .container {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 50px;
+}
+
+.container .footer .container .card1 h2 {
+    font-size: 30px;
+    margin-bottom: 10px;
+}
+
+.container .footer .container .card1 p {
+    font-size: 18px;
+    color: var(--main-color-9);
+}
+
+.container .footer .container .card1 .def {
+    color: white;
+    margin-top: 40px;
+    margin-bottom: 20px;
+}
+
+.container .footer .container .card1 .icon i {
+    font-size: 42px;
+    cursor: pointer;
+}
+
+.container .footer .container .card2 {
+    display: flex;
+}
+.container .footer .container .card2 .crd{
+    margin-left: 100px;
+}
+.container .footer .container .card2 .crd h2{
+    margin-bottom: 20px;
+}
+.container .footer .container .card2 .crd p{
+    margin-bottom: 20px;
+    color: var(--main-color-9);
+    cursor: pointer;
+}
+.container .footer .foot{
+    text-align: center;
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+@media(max-width:767px){
+    .container .footer{
+        margin: 30px 10px 0;
+    }
+    .container .footer .container{
+        flex-direction: column;
+    }
+    .container .footer .container .card2{
+        overflow-x: scroll;
+        margin-top: 30px;
+    }
+    .container .footer .container .card2 .crd{
+        margin-left: 10px;
+    }
+    .container .footer .container .card2 .crd h2{
+        font-size: 18px;
+    }
+    .container .footer .container .card2 .crd p{
+        font-size: 13px;
+    }
+}
+/* end conteiner footer */
